@@ -26,8 +26,8 @@ pt-BR:
       team: 
         name: "Nome da Equipe"
       morning_form:
-        answer1: "O que você realizou hoje?"
-        answer2: "Houve algum impedimento?"
+        answer1: "O que pretende fazer hoje?"
+        answer2: "Há algum impedimento?"
       afternoon_form:
         answer1: "O que você realizou hoje?"
         answer2: "Houve algum impedimento?"
