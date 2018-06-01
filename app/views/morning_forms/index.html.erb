@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Morning Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Answer1</th>
+      <th>Answer2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @morning_forms.each do |morning_form| %>
+      <tr>
+        <td><%= morning_form.answer1 %></td>
+        <td><%= morning_form.answer2 %></td>
+        <td><%= link_to 'Show', morning_form %></td>
+        <td><%= link_to 'Edit', edit_morning_form_path(morning_form) %></td>
+        <td><%= link_to 'Destroy', morning_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Morning Form', new_morning_form_path %>

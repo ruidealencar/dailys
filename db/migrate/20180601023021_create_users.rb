@@ -1,0 +1,11 @@
+class CreateUsers < ActiveRecord::Migration[5.2]
+  def change
+    create_table :users do |t|
+      t.boolean :admin
+      t.references :team, foreign_key: true
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Afternoon Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Answer1</th>
+      <th>Answer2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @afternoon_forms.each do |afternoon_form| %>
+      <tr>
+        <td><%= afternoon_form.answer1 %></td>
+        <td><%= afternoon_form.answer2 %></td>
+        <td><%= link_to 'Show', afternoon_form %></td>
+        <td><%= link_to 'Edit', edit_afternoon_form_path(afternoon_form) %></td>
+        <td><%= link_to 'Destroy', afternoon_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Afternoon Form', new_afternoon_form_path %>

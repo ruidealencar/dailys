@@ -1,0 +1,27 @@
+<%= form_with(model: morning_form, local: true) do |form| %>
+  <% if morning_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(morning_form.errors.count, "error") %> prohibited this morning_form from being saved:</h2>
+
+      <ul>
+      <% morning_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :answer1 %>
+    <%= form.text_area :answer1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer2 %>
+    <%= form.text_area :answer2 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

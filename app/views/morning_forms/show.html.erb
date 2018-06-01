@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Answer1:</strong>
+  <%= @morning_form.answer1 %>
+</p>
+
+<p>
+  <strong>Answer2:</strong>
+  <%= @morning_form.answer2 %>
+</p>
+
+<%= link_to 'Edit', edit_morning_form_path(@morning_form) %> |
+<%= link_to 'Back', morning_forms_path %>

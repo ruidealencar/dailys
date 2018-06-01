@@ -1,0 +1,2 @@
+class AfternoonForm < ApplicationRecord
+end
