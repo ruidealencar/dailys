@@ -1,4 +1,8 @@
-<h2>Log in</h2>
+<h2>Bem-Vindo ao Dailys</h2>
+<p>Entre com seu email e sua senha para preencher o formulário.</p>
+<p>Existem dois formulários.</p>
+<p>Formulário das manhãs é respondido antes de realizar as atividades.</p>
+<p>Formulário das tardes é respondido no final do expediênte.</p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -10,13 +14,6 @@
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
 
   <div class="actions">
     <%= f.submit "Log in" %>

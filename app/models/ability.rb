@@ -10,8 +10,8 @@ class Ability
       if user.admin?
         can :dashboard
         can :access, :rails_admin
-        can :manage, MorningForm
-        can :manage, AfternoonForm
+        can :read, MorningForm
+        can :read, AfternoonForm
         can :manage, Team
         can :manage, User  
       else
