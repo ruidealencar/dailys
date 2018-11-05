@@ -39,15 +39,19 @@ ActiveRecord::Schema.define(version: 2018_06_01_031917) do
   create_table "afternoon_forms", force: :cascade do |t|
     t.text "answer1"
     t.text "answer2"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_afternoon_forms_on_user_id"
   end
 
   create_table "morning_forms", force: :cascade do |t|
     t.text "answer1"
     t.text "answer2"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_morning_forms_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -77,5 +81,7 @@ ActiveRecord::Schema.define(version: 2018_06_01_031917) do
     t.index ["team_id"], name: "index_users_on_team_id"
   end
 
+  add_foreign_key "afternoon_forms", "users"
+  add_foreign_key "morning_forms", "users"
   add_foreign_key "users", "teams"
 end
